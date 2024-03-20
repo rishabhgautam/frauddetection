@@ -1,0 +1,58 @@
+<!index html>
+	<html >
+	
+	<head>
+	  <meta charset="UTF-8">
+	  <title>FRAUD DETECTION</title>
+	  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+	  
+	</head>
+	
+
+	<body>
+	 <div class="login">
+		<h1 style="color:rgb(226, 19, 164)"><b><center> Credit Card Fraud Detection </center></b></h1>
+		
+		<center><img src="https://cdn.sketchbubble.com/pub/media/catalog/product/optimized1/4/a/4af2dada5403d9ea7b1520cfbe202b1ac5f94308633c7defb1702e39e5f510a8/credit-card-fraud-detection-slide1.png" alt="Credit Card Fraud Detection" width="500" height="300"></center>
+		 
+		<h2 style="color:rgb(49, 10, 190);"><b><center>Please enter values to the following fields to predict whether the transaction is fraudulent or not</center></b></h2>
+
+	     <!-- Main Input For Receiving Query to our ML -->
+	    <center><form action="{{ url_for('predict')}}"method="post">
+			
+	    	<input type="number"  name="V22" placeholder="V22" required="required" min="-10.93" max="10.50"/>
+	    	<input type="number"  name="V3" placeholder="V3" required="required" min="-48.32" max="9.38"/>
+	    	<input type="number"  name="V8" placeholder="V8" required="required" min="-73.21" max="20.00"/>
+	    	<input type="number"  name="V11" placeholder="V11" required="required" min="-4.79" max="12.01"/>
+	    	<input type="number"  name="V17" placeholder="V17" required="required" min="-25.16" max="9.25"/>
+	    	<input type="number"  name="V4" placeholder="V4" required="required" min="-5.68" max="16.87"/>
+	    	<input type="number"  name="V14" placeholder="V14" required="required" min="-19.21" max="10.52"/>
+	    	<input type="number"  name="V21" placeholder="V21" required="required" min="-34.83" max="27.20"/>
+			<input type="number"  name="V12" placeholder="V12" required="required" min="-18.68" max="7.84"/>
+	    	<input type="number"  name="V7" placeholder="V7" required="required" min="-43.55" max="120.58"/>
+	    	<input type="number"  name="V16" placeholder="V16" required="required" min="-14.12" max="17.31"/>
+	    	<input type="number"  name="V10" placeholder="V10" required="required" min="-24.58" max="23.74"/>
+	    	<input type="number"  name="V13" placeholder="V13" required="required" min="-5.79" max="7.12"/>
+	    	
+       <button type="submit" class="btn btn-primary btn-block btn-lg">PREDICT</button>
+	<button type="reset">RESET THE FORM</button><br><br>
+	
+
+	    </form></center>
+	
+
+	   <br>
+	   <br>
+	   {{ prediction_text }}
+	
+
+	 </div>
+	
+
+	
+	</body>
+	</html>
+
